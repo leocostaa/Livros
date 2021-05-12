@@ -8,7 +8,9 @@ class BdLivrosOpenHelper(context : Context?) :
     SQLiteOpenHelper(context, NOME_BASE_DADOS, null, VERSAO_BASE_DADOS) {
 
     override fun onCreate(db: SQLiteDatabase?) {
-        TODO("Not yet implemented")
+        if (db != null) {
+            TabelaCategorias(db).cria()
+        }
     }
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
         TODO("Not yet implemented")
@@ -18,3 +20,5 @@ class BdLivrosOpenHelper(context : Context?) :
         const val VERSAO_BASE_DADOS = 1
     }
 }
+
+
