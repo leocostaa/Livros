@@ -10,6 +10,7 @@ class BdLivrosOpenHelper(context : Context?) :
     override fun onCreate(db: SQLiteDatabase?) {
         if (db != null) {
             TabelaCategorias(db).cria()
+            TabelaLivros(db).cria()
         }
     }
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {

@@ -15,9 +15,8 @@ class TabelaLivros (db: SQLiteDatabase) {
                 CAMPO_AUTOR + "TEXT NOT NULL," +
                 CAMPO_ID_CATEGORIA + "INTEGER NOT NULL," +
                 "FOREIGN KEY (" + CAMPO_ID_CATEGORIA + ")" +
-                     "REFERENCES" + TabelaCategorias.NOME_TABELA
-        )
-                
+                     "REFERENCES" + TabelaCategorias.NOME_TABELA )
+
 
         //CREATE TABLE livros (
         //      _id INTEGER PRIMARY KEY AUTOINCREMENT,
